@@ -77,7 +77,8 @@ body a {
   height: 50px;
   line-height: 50px;
   font-size: 24px;
-  margin: 8px; }
+  margin: 8px;
+  cursor: pointer; }
 
 .main {
   padding: 1em; }

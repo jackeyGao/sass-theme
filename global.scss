@@ -1,0 +1,91 @@
+$font: Georgia,"Nimbus Roman No9 L","Songti SC",STSong,"AR PL New Sung","AR PL SungtiL GB",NSimSun,SimSun,"TW\-Sung","WenQuanYi Bitmap Song","AR PL UMing CN","AR PL UMing HK","AR PL UMing TW","AR PL UMing TW MBE",sans-serif;
+$code: Courier, 'Courier New', monospace;
+
+
+$themes: (
+    sk-default: (
+        bg: #2c3e50,
+        bg-color: #fff
+    ),
+    sk-green: (
+        bg: #80ac7b,
+        bg-color: #fff
+    ),
+    sk-mo: (
+        bg: #585756,
+        bg-color: #fff
+    ),
+    sk-orange: (
+        bg : #ff8364,
+        bg-color: #FFF
+    ),
+    sk-pink: (
+        bg : #e7759a,
+        bg-color : #f6ec66
+    ),
+    sk-yellow: (
+        bg : #f7de1c,
+        bg-color : #333
+    )
+);
+
+
+@each $theme, $config in $themes {
+    .#{$theme} .main
+    {
+        background: map-get($config, 'bg');
+        color: map-get($config, 'bg-color');
+    }
+    
+    .themes .#{$theme}.theme {
+        border: 1px solid map-get($config, 'bg-color');
+        background: map-get($config, 'bg');
+        color:  map-get($config, 'bg-color');
+    }
+}
+
+body {
+    font-family: $font;
+    margin: 0;
+}
+
+body p {
+    font-weight: 300;
+    line-height: 2;
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+body a {
+    color: #333;
+}
+
+
+.themes {
+    background: #000;
+    padding: 1em; 
+    text-align: center;
+}
+
+.themes .theme {
+    display: inline-block;
+    padding: 1em;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 24px;
+    margin: 8px;
+}
+
+.main {
+    padding: 1em;
+}
+
+.main .meta {
+    text-align: right;
+    opacity: .45;
+}
+
+.footer {
+    text-align: center;
+}

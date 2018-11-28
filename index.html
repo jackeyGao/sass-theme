@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ SASS更换主题 }}</title>
+    <link rel="stylesheet" href="global.css"> 
+    <link rel="stylesheet" href="container.css"> 
+<body class="sk-default">
+    <div class="ui container">
+        <div class="themes">
+            <div 
+                onclick="document.body.className = 'sk-default'; localStorage.setItem('theme', 'sk-default');"
+                class="sk-default theme">青</div>
+            <div
+                onclick="document.body.className = 'sk-mo'; localStorage.setItem('theme', 'sk-mo');"
+                class="sk-mo theme">墨</div>
+            <div
+                onclick="document.body.className = 'sk-green'; localStorage.setItem('theme', 'sk-green');"
+                class="sk-green theme">绿</div>
+            <div
+                onclick="document.body.className = 'sk-orange'; localStorage.setItem('theme', 'sk-orange');" 
+                class="sk-orange theme">橘</div>
+            <div
+                onclick="document.body.className = 'sk-yellow'; localStorage.setItem('theme', 'sk-yellow');"
+                class="sk-yellow theme">黄</div>
+            <div
+                onclick="document.body.className = 'sk-pink'; localStorage.setItem('theme', 'sk-pink');"
+                class="sk-pink theme">粉</div>
+        </div>
+
+        <div class="main">
+            <p>时间就像海绵里的水，只要愿挤，总还是有的。</p>
+
+            <p class="meta">鲁迅</p>
+        </div>
+        <div class="footer">
+            <p>© <a href="https://jackeygao.io">JackeyGao.io</a> 2018. </p>
+        </div>
+    </div>
+</body>
+</html>
